@@ -3,6 +3,11 @@ import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import gitHub from "../Images/Socials/4747499_github_icon.png";
+import LinkedIn from "../Images/Socials/5296501_linkedin_network_linkedin logo_icon.png";
+import Twitter from "../Images/Socials/317723_social media_tweet_twitter_social_icon.png";
+import Instagram from "../Images/Socials/1298747_instagram_brand_logo_social media_icon.png";
+
 const Contact = () => {
   const { REACT_APP_SERVICE_KEY, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } =
     process.env;
@@ -137,7 +142,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="w-full sm:max-w-xs md:max-w-md m-auto pb-4">
+      <div className="w-full sm:max-w-xs md:max-w-md m-auto pb-4 mt-4">
         <form
           className="bg-white rounded px-8 pt-6 pb-8 mb-4 dark:bg-darkSecondary"
           onSubmit={sendMail}
@@ -292,7 +297,52 @@ const Contact = () => {
             Submit
           </button>
         </form>
+
+        <div>
+          <h3 className="text-center font-bold text-white">
+            Please Feel Free To Reach Out On The Following Platforms{" "}
+          </h3>
+
+          <div className="flex sm:justify-between mt-8 p-4">
+            <div className="cursor-pointer transform transition duration-500 hover:scale-110">
+              <a href="https://github.com/noel2017mdala/">
+                <img className="w-8 h-8 rounded" src={gitHub} />
+              </a>
+            </div>
+
+            <div className="cursor-pointer transform transition duration-500 hover:scale-110">
+              <a href="https://www.linkedin.com/in/abel-mdala/">
+                <img className="w-8 h-8 rounded" src={LinkedIn} />
+              </a>
+            </div>
+            {/* <div className="cursor-pointer transform transition duration-500 hover:scale-110">
+<img className="w-8 h-8 rounded" src={Gmail} />
+</div> */}
+            <div className="cursor-pointer transform transition duration-500 hover:scale-110">
+              <a href="https://twitter.com/MdalaNoel">
+                <img className="w-8 h-8 rounded" src={Twitter} />
+              </a>
+            </div>
+            <div className="cursor-pointer transform transition duration-500 hover:scale-110">
+              <a href="https://www.instagram.com/abelgmdala/">
+                <img className="w-8 h-8 rounded" src={Instagram} />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </>
   );
 };

@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import image from "../Images/IMG_1454.png";
-const About = () => {
+const About = (props) => {
+  useEffect(() => {
+    console.log(props);
+  });
   return (
     <div className="h-fit bg-primary2 min-h-screen" id="About">
       <div className=" w-4/5 mx-auto ">

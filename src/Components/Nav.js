@@ -15,14 +15,20 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="absolute w-full ">
+      <nav className="absolute w-full shadow">
         {/* Navigation */}
 
         <div className="basis-0 grow w-full bg-secondary sm:hidden md:block section stickyPosition">
           <div className=" w-fit inline-block ml-8 mt-3">
-            <a href="#Home" className="text-white text-xl">
-              Abel M'dala
-            </a>
+            <li className="text-white text-xl">
+              <a
+                className="mr-3 text-xl cursor-pointer"
+                href="#Home"
+                onClick={clickHandler}
+              >
+                Abel M'dala
+              </a>
+            </li>
           </div>
 
           <div className="float-right mt-3 text-white ">

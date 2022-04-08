@@ -1,6 +1,7 @@
 import React from "react";
 import whatsappImage from "../Images/Projects/webWhastapp_clone.jpg";
 import photo_gallery from "../Images/Projects/photo_gallery.png";
+import { Link } from "react-router-dom";
 const Portfolio = () => {
   return (
     <div className="h-fit min-h-screen bg-primary" id="Portfolio">
@@ -38,6 +39,7 @@ const Portfolio = () => {
               <span className=" px-3 mx-2 bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
                 Redux
               </span>
+
               <span className=" px-3 mx-2 bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
                 Node.js
               </span>
@@ -49,7 +51,7 @@ const Portfolio = () => {
               <span className=" px-3 mx-2 bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
                 MongoDb
               </span>
-              <span className=" px-3 mx-2 bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
+              <span className=" px-3 mx-2  bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
                 AWS
               </span>
             </div>
@@ -107,7 +109,7 @@ const Portfolio = () => {
 
         <div className="">
           <button className=" mx-auto border mt-8  p-2 rounded-sm text-secondary border-secondary hover:bg-secondary hover:text-primary  md:block">
-            View more projects
+            <Link to="/Portfolio">View more projects</Link>
           </button>
         </div>
       </div>
