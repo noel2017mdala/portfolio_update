@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 import HTML from "../Images/Skills/html.af7415b4.svg";
 import CSS from "../Images/Skills/css.9ed7063d.svg";
@@ -76,10 +77,30 @@ const list = [
   },
 ];
 
-const Skills = () => {
+const Skills = (props) => {
+  const { ref, inView, entry } = useInView();
+
+  const [moduleView, setModuleVue] = useState(inView);
+  const { tabState, setTabState } = props.navState;
+
+  // console.log(moduleView);
+
+  useEffect(() => {
+    if (inView) {
+      setTabState({
+        ...tabState,
+
+        about: false,
+        portfolio: false,
+        skills: true,
+        contact: false,
+      });
+    }
+  }, [inView]);
+
   return (
     <div className="h-fit min-h-screen bg-primary2" id="Skills">
-      <div className="w-11/12 m-auto ">
+      <div className="w-11/12 m-auto " ref={ref}>
         <div className="inline-block   w-full h-full mt-4 ">
           <div className="w-1/6">
             <h3 className="sm:mx-auto text-white text-2xl mt-4 ">

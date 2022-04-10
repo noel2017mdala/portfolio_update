@@ -1,13 +1,32 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 import image from "../Images/IMG_1454.png";
 
-const Introduction = () => {
+const Introduction = (props) => {
+  const { ref, inView, entry } = useInView();
+
+  const [moduleView, setModuleVue] = useState(inView);
+  const { tabState, setTabState } = props.navState;
+
+  useEffect(() => {
+    if (inView) {
+      setTabState({
+        ...tabState,
+
+        about: false,
+        portfolio: false,
+        skills: false,
+        contact: false,
+      });
+    }
+  }, [inView]);
+
   return (
     <div className="w-full h-full flex ">
       <div className="bg-primary w-full basis-40 grow">
         <div className="w-9/12 h-3/4">
-          <div className="flex items-center justify-center h-full">
+          <div className="flex items-center justify-center h-full" ref={ref}>
             <div className="w-5/6 mt-20">
               <h3 className="text-white text-2xl font-semibold">Hello 👋</h3>
               <p className="text-secondary text-2xl mt-2">I'm Abel M'dala</p>

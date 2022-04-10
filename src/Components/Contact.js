@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -8,7 +9,25 @@ import LinkedIn from "../Images/Socials/5296501_linkedin_network_linkedin logo_i
 import Twitter from "../Images/Socials/317723_social media_tweet_twitter_social_icon.png";
 import Instagram from "../Images/Socials/1298747_instagram_brand_logo_social media_icon.png";
 
-const Contact = () => {
+const Contact = (props) => {
+  const { ref, inView, entry } = useInView();
+
+  const [moduleView, setModuleVue] = useState(inView);
+  const { tabState, setTabState } = props.navState;
+
+  useEffect(() => {
+    if (inView) {
+      setTabState({
+        ...tabState,
+
+        about: false,
+        portfolio: false,
+        skills: false,
+        contact: true,
+      });
+    }
+  }, [inView]);
+
   const { REACT_APP_SERVICE_KEY, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } =
     process.env;
 
@@ -95,6 +114,8 @@ const Contact = () => {
         body: true,
       });
     } else {
+      console.log(e.target.userName);
+      return;
       emailjs
         .sendForm(
           REACT_APP_SERVICE_KEY,
@@ -141,11 +162,12 @@ const Contact = () => {
     });
 
   return (
-    <>
+    <div>
       <div className="w-full sm:max-w-xs md:max-w-md m-auto pb-4 mt-4">
         <form
           className="bg-white rounded px-8 pt-6 pb-8 mb-4 dark:bg-darkSecondary"
           onSubmit={sendMail}
+          ref={ref}
         >
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2 uppercase dark:text-black">
@@ -343,7 +365,7 @@ const Contact = () => {
         draggable
         pauseOnHover
       />
-    </>
+    </div>
   );
 };
 

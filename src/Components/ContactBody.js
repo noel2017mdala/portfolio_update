@@ -1,7 +1,7 @@
 import React from "react";
 import Contact from "./Contact";
 
-const ContactBody = () => {
+const ContactBody = (props) => {
   return (
     <div className="h-fit min-h-screen bg-primary" id="Contact">
       <div className="w-11/12 m-auto ">
@@ -16,7 +16,7 @@ const ContactBody = () => {
       </div>
 
       <div>
-        <Contact />
+        <Contact navState={props.navState} />
       </div>
     </div>
   );

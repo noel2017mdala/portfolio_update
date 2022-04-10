@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import ReactGa from "react-ga";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from "./Components/About";
 import Portfolio from "./Components/Portfolio";
@@ -17,15 +18,20 @@ const Container = () => {
     skills: false,
     contact: false,
   });
+
+  useEffect(() => {
+    ReactGa.initialize("G-9M1ZT05T0P");
+    ReactGa.pageview("/");
+  }, []);
   return (
     <div className="h-screen lg:hidden relative" id="Home">
-      <Nav />
+      <Nav navState={{ tabState, setTabState }} />
 
-      <Introduction />
+      <Introduction navState={{ tabState, setTabState }} />
       <About navState={{ tabState, setTabState }} />
-      <Portfolio />
-      <Skills />
-      <ContactBody />
+      <Portfolio navState={{ tabState, setTabState }} />
+      <Skills navState={{ tabState, setTabState }} />
+      <ContactBody navState={{ tabState, setTabState }} />
 
       <div className="rest"></div>
     </div>

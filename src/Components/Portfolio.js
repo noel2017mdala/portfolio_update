@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import whatsappImage from "../Images/Projects/webWhastapp_clone.jpg";
 import photo_gallery from "../Images/Projects/photo_gallery.png";
 import { Link } from "react-router-dom";
-const Portfolio = () => {
+const Portfolio = (props) => {
+  const { ref, inView, entry } = useInView();
+  const [moduleView, setModuleVue] = useState(inView);
+  const { tabState, setTabState } = props.navState;
+
+  useEffect(() => {
+    if (inView) {
+      setTabState({
+        ...tabState,
+
+        about: false,
+        portfolio: true,
+        skills: false,
+        contact: false,
+      });
+    }
+  }, [inView]);
+
   return (
     <div className="h-fit min-h-screen bg-primary" id="Portfolio">
       <div className="w-11/12 m-auto ">
-        <div className="inline-block   w-full h-full mt-4 ">
+        <div className="inline-block   w-full h-full mt-4 " ref={ref}>
           <div className="w-1/6">
             <h3 className="sm:mx-auto text-white text-2xl mt-4 ">
               Portfolio
@@ -57,12 +75,20 @@ const Portfolio = () => {
             </div>
 
             <div className="mt-4 mx-auto flex flex-row">
-              <button className="border my-4  py-2 rounded-sm text-white border-secondary2 hover:bg-secondary2 hover:text-white  md:block w-3/12 mx-2">
+              <a
+                className="text-center border my-4  py-2 rounded-sm text-white border-secondary2 hover:bg-secondary2 hover:text-white  md:block w-3/12 mx-2"
+                href="https://github.com/noel2017mdala/whatsapp_clone"
+                target="_blank"
+              >
                 GitHub
-              </button>
-              <button className="border my-4  py-2 rounded-sm text-secondary border-secondary hover:bg-secondary hover:text-primary  md:block w-3/12 mx-2">
+              </a>
+              <a
+                className="text-center border my-4  py-2 rounded-sm text-secondary border-secondary hover:bg-secondary hover:text-primary  md:block w-3/12 mx-2"
+                href="http://whatsapp-webb-clone.netlify.app/"
+                target="_blank"
+              >
                 Live Demo
-              </button>
+              </a>
             </div>
           </div>
 
@@ -97,20 +123,31 @@ const Portfolio = () => {
             </div>
 
             <div className="mt-4 mx-auto flex flex-row">
-              <button className="border my-4  py-2 rounded-sm text-white border-secondary2 hover:bg-secondary2 hover:text-white  md:block w-3/12 mx-2">
+              <a
+                className="border my-4  py-2 rounded-sm text-white border-secondary2 hover:bg-secondary2 hover:text-white  md:block w-3/12 mx-2 text-center"
+                href="https://github.com/noel2017mdala/photo_gallery"
+                target="_blank"
+              >
                 GitHub
-              </button>
-              <button className="border my-4  py-2 rounded-sm text-secondary border-secondary hover:bg-secondary hover:text-primary  md:block w-3/12 mx-2">
+              </a>
+              <a
+                className="text-center border my-4  py-2 rounded-sm text-secondary border-secondary hover:bg-secondary hover:text-primary  md:block w-3/12 mx-2"
+                href="https://heuristic-wright-38b95c.netlify.app/"
+                target="_blank"
+              >
                 Live Demo
-              </button>
+              </a>
             </div>
           </div>
         </div>
 
         <div className="">
-          <button className=" mx-auto border mt-8  p-2 rounded-sm text-secondary border-secondary hover:bg-secondary hover:text-primary  md:block">
-            <Link to="/Portfolio">View more projects</Link>
-          </button>
+          <Link
+            to="/Portfolio"
+            className="mx-auto border mt-8  p-2 rounded-sm text-secondary border-secondary hover:bg-secondary hover:text-primary  md:block w-1/5 text-center"
+          >
+            View more projects
+          </Link>
         </div>
       </div>
     </div>

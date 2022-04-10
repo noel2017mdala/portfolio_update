@@ -1,9 +1,26 @@
 import React, { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import image from "../Images/IMG_1454.png";
 const About = (props) => {
+  const { ref, inView, entry } = useInView();
+  const [moduleView, setModuleVue] = useState(inView);
+  const { tabState, setTabState } = props.navState;
+
   useEffect(() => {
-    console.log(props);
-  });
+    if (inView) {
+      // console.log("Hello World from About");
+
+      setTabState({
+        ...tabState,
+
+        about: true,
+        portfolio: false,
+        skills: false,
+        contact: false,
+      });
+    }
+  }, [inView]);
+
   return (
     <div className="h-fit bg-primary2 min-h-screen" id="About">
       <div className=" w-4/5 mx-auto ">
@@ -22,7 +39,7 @@ const About = (props) => {
                 <div className="h-0.5 bg-secondary mt-4"></div>
               </h3>
 
-              <p className="mt-4 text-lg text-white">
+              <p className="mt-4 text-lg text-white" ref={ref}>
                 I Graduated from St John Paul College with an Advanced Diploma
                 in Network Engineering, and I then later fell in love with
                 programming and started Learning it. I have experience

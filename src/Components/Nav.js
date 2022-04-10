@@ -1,6 +1,6 @@
 import React from "react";
 
-const Nav = () => {
+const Nav = (props) => {
   const clickHandler = (e) => {
     e.preventDefault();
 
@@ -33,7 +33,12 @@ const Nav = () => {
 
           <div className="float-right mt-3 text-white ">
             <ul className="inline ">
-              <li className="">
+              <li
+                className={`mr-2 text-xl ${
+                  props.navState.tabState.about ? "bg-secondary" : ""
+                } text-white p-2 rounded  text-center `}
+                onClick={clickHandler}
+              >
                 <a
                   className="mr-3 text-xl cursor-pointer"
                   href="#About"
@@ -42,7 +47,12 @@ const Nav = () => {
                   About
                 </a>
               </li>
-              <li>
+              <li
+                className={`mr-2 text-xl ${
+                  props.navState.tabState.portfolio ? "bg-secondary" : ""
+                } text-white p-2 rounded  text-center `}
+                onClick={clickHandler}
+              >
                 <a
                   className="mr-3 text-xl cursor-pointer"
                   href="#Portfolio"
@@ -52,9 +62,14 @@ const Nav = () => {
                 </a>
               </li>
 
-              <li>
+              <li
+                className={`mr-2 text-xl ${
+                  props.navState.tabState.skills ? "bg-secondary" : ""
+                } text-white p-2 rounded  text-center `}
+                onClick={clickHandler}
+              >
                 <a
-                  className="mr-3 text-xl cursor-pointer"
+                  className="mr-3 text-xl cursor-pointer text-center"
                   href="#Skills"
                   onClick={clickHandler}
                 >
@@ -62,7 +77,9 @@ const Nav = () => {
                 </a>
               </li>
               <li
-                className="mr-2 text-xl bg-primary text-white p-2 rounded  text-center "
+                className={`mr-2 text-xl ${
+                  props.navState.tabState.contact ? "bg-secondary" : ""
+                } text-white p-2 rounded  text-center `}
                 onClick={clickHandler}
               >
                 <a className="mr-3 text-xl cursor-pointer" href="#Contact">
