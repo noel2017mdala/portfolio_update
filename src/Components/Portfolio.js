@@ -25,8 +25,8 @@ const Portfolio = (props) => {
     <div className="h-fit min-h-screen bg-primary" id="Portfolio">
       <div className="w-11/12 m-auto ">
         <div className="inline-block   w-full h-full mt-4 " ref={ref}>
-          <div className="w-1/6">
-            <h3 className="sm:mx-auto text-white text-2xl mt-4 ">
+          <div className="w-fit">
+            <h3 className="sm:mx-auto text-white text-2xl mt-4 w-fit">
               Portfolio
               <div className="h-0.5 bg-secondary mt-4"></div>
             </h3>
@@ -43,11 +43,15 @@ const Portfolio = (props) => {
               Whatsapp web clone
             </h1>
             <p className="text-white mt-4">
-              A simple website that allows new and returning students to learn
-              about the ACM club and keep them updated on upcoming events.
-              Implemented using React for frontend and Sanity.io for headless
-              content management system that allows current board members to
-              edit/add events and member information without touching code.
+              I was inspired by the way WhatsApp web works so I created a clone
+              of it. I enjoyed working on this application because it helped me
+              understand more of the tools and technologies I used. This clone
+              Application allows users to communicate privately and also create
+              groups to have group communications. users can also update their
+              Profiles as well as their about and they can also add contacts to
+              their contact list. This application was developed using React,
+              Redux, TailwindCSS for the frontEnd and also Node.js, Express.js,
+              Mongoose, MongoDB, and also AWS for the Back-End.
             </p>
 
             <div className="flex  flex-row flex-wrap mt-2 w-fit">
@@ -99,11 +103,8 @@ const Portfolio = (props) => {
           <div className="mt-6">
             <h1 className="text-secondary font-bold text-2xl">Photo Gallery</h1>
             <p className="text-white mt-4">
-              A simple website that allows new and returning students to learn
-              about the ACM club and keep them updated on upcoming events.
-              Implemented using React for frontend and Sanity.io for headless
-              content management system that allows current board members to
-              edit/add events and member information without touching code.
+              In this application, I Created a photo gallery app that uses the
+              Unsplash Api to fetch images of different people.
             </p>
 
             <div className="flex  flex-row flex-wrap mt-2 w-fit">
@@ -141,13 +142,15 @@ const Portfolio = (props) => {
           </div>
         </div>
 
-        <div className="">
-          <Link
-            to="/Portfolio"
-            className="mx-auto border mt-8  p-2 rounded-sm text-secondary border-secondary hover:bg-secondary hover:text-primary  md:block w-1/5 text-center"
-          >
-            View more projects
-          </Link>
+        <div className="text-center">
+          <div className="inline-block my-6  text-center">
+            <Link
+              to="/Portfolio"
+              className="mx-auto border mt-8  p-2 rounded-sm text-secondary border-secondary hover:bg-secondary hover:text-primary  md:block w-fit text-center"
+            >
+              View more projects
+            </Link>
+          </div>
         </div>
       </div>
     </div>

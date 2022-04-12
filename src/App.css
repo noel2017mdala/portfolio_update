@@ -160,10 +160,14 @@ html {
 .stickyPosition {
   position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 10;
   background: rgba(44, 44, 44, 0.5607843137254902);
   height: 3.5em;
   box-sizing: border-box;
 
   border: transparent;
+}
+
+.mobileNav {
+  background: rgba(44, 44, 44, 0.5607843137254902);
 }

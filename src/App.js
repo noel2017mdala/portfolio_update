@@ -24,7 +24,7 @@ const Container = () => {
     ReactGa.pageview("/");
   }, []);
   return (
-    <div className="h-screen lg:hidden relative" id="Home">
+    <div className="h-screen  relative" id="Home">
       <Nav navState={{ tabState, setTabState }} />
 
       <Introduction navState={{ tabState, setTabState }} />

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import Resume from "../Documents/Resume.pdf";
 import image from "../Images/IMG_1454.png";
 const About = (props) => {
   const { ref, inView, entry } = useInView();
@@ -26,15 +27,15 @@ const About = (props) => {
       <div className=" w-4/5 mx-auto ">
         <div className="inline-block   w-full h-full mt-4">
           <div className="flex sm:flex-col smd:flex-row">
-            <div className="basis-0 grow w-full  sm:w-full smd:w-6/12 md:w-6/12 max-h-screen ">
+            <div className="basis-0 grow w-full  sm:w-full smd:w-6/12 md:w-6/12 max-h-screen lg:w-2/4 ">
               <img
                 src={image}
                 alt="Abel Mdala"
                 className="w-3/5 h-full block mx-auto AboutImage"
               />
             </div>
-            <div className="flex basis-0 grow w-full flex-col ">
-              <h3 className="sm:mx-auto text-white text-2xl mt-4 ">
+            <div className="flex basis-0 grow w-fit flex-col ">
+              <h3 className="sm:mx-auto text-white text-2xl mt-4 w-fit">
                 About Me
                 <div className="h-0.5 bg-secondary mt-4"></div>
               </h3>
@@ -54,9 +55,14 @@ const About = (props) => {
                 I am passionate about learning new technologies and how i can
                 integrate them into my daily work.
               </p>
-              <button className="border my-4  py-2 rounded-sm text-secondary border-secondary hover:bg-secondary hover:text-primary  md:block w-2/5">
+
+              <a
+                className="border mt-20 my-6 px-4 py-2 rounded-sm text-secondary border-secondary hover:bg-secondary hover:text-primary  w-fit text-center inline-block"
+                href={Resume}
+                target="_blank"
+              >
                 My Resume
-              </button>
+              </a>
             </div>
           </div>
         </div>

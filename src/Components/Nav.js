@@ -104,6 +104,22 @@ const Nav = (props) => {
 
         {/* Navigation  w-3/5*/}
       </nav>
+
+      <div className="mobileNav w-full h-16  fixed z-20 sm:block md:hidden lg:hidden ">
+        <div className="">
+          <div
+            className="cursor-pointer  fixed top-4 right-4"
+            onClick={() => {
+              // !toggleOpen ? setToggle(true) : setToggle(false);
+              // !toggleOpen ? setToggle(true) : setToggle(false);
+            }}
+          >
+            <div className="bg-white w-8 h-1 m-1.5"></div>
+            <div className="bg-white w-8 h-1 m-1.5"></div>
+            <div className="bg-white w-8 h-1 m-1.5"></div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

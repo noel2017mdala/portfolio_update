@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import Resume from "../Documents/Resume.pdf";
 
 import image from "../Images/IMG_1454.png";
 
@@ -34,9 +35,13 @@ const Introduction = (props) => {
                 Full-stack software developer.&nbsp;
               </p>
 
-              <button className="border mt-20 px-4 py-2 rounded-sm text-secondary border-secondary hover:bg-secondary hover:text-primary  md:block">
+              <a
+                className="border mt-20 px-4 py-2 rounded-sm text-secondary border-secondary hover:bg-secondary hover:text-primary  block w-fit text-center"
+                href={Resume}
+                target="_blank"
+              >
                 My Resume
-              </button>
+              </a>
             </div>
           </div>
         </div>
