@@ -75,15 +75,8 @@ const PersonalProjects = (props) => {
               title: "Photo gallery App",
               image: photo_gallery,
               description:
-                "I was inspired by the way WhatsApp web works so I created a clone of it. I enjoyed working on this application because it helped me understand more of the tools and technologies I used. This clone Application allows users to communicate privately and also create groups to have group communications. users can also update their Profiles as well as their about and they can also add contacts to their contact list. This application was developed using React, Redux, TailwindCSS for the frontEnd and also Node.js, Express.js, Mongoose, MongoDB, and also AWS for the Back-End.",
-              tools: [
-                "React",
-                "Redux",
-                "Node.js",
-                "Express.js",
-                "MongoDb",
-                "AWS",
-              ],
+                "This Project was developed using React,Redux and ReactStyled Components and i incorporated The Unsplash API which provides dozens of images that are displayed on this website and you can see different images from different users. I developed the project from the Ground App except the API that is provided buy Unsplash.",
+              tools: ["React", "Redux", "Styled Components", "Unsplash API"],
 
               buttons: [
                 {
@@ -124,15 +117,8 @@ const PersonalProjects = (props) => {
               title: "Financial Management System",
               image: FMS,
               description:
-                "I was inspired by the way WhatsApp web works so I created a clone of it. I enjoyed working on this application because it helped me understand more of the tools and technologies I used. This clone Application allows users to communicate privately and also create groups to have group communications. users can also update their Profiles as well as their about and they can also add contacts to their contact list. This application was developed using React, Redux, TailwindCSS for the frontEnd and also Node.js, Express.js, Mongoose, MongoDB, and also AWS for the Back-End.",
-              tools: [
-                "React",
-                "Redux",
-                "Node.js",
-                "Express.js",
-                "MongoDb",
-                "AWS",
-              ],
+                "This Full-Stack Application was  developed using React, PHP, Laravel and Mysql. This application helps me easily manage my Finances and it provides a graphical representation of how i am spending with Chart.js which i incorporated in the application ",
+              tools: ["React", "Redux", "PHP", "Laravel", "Mysql"],
 
               buttons: [
                 {

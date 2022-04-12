@@ -103,8 +103,11 @@ const Portfolio = (props) => {
           <div className="mt-6">
             <h1 className="text-secondary font-bold text-2xl">Photo Gallery</h1>
             <p className="text-white mt-4">
-              In this application, I Created a photo gallery app that uses the
-              Unsplash Api to fetch images of different people.
+              This Project was developed using React,Redux and ReactStyled
+              Components and i incorporated The Unsplash API which provides
+              dozens of images that are displayed on this website and you can
+              see different images from different users. I developed the project
+              from the Ground App except the API.
             </p>
 
             <div className="flex  flex-row flex-wrap mt-2 w-fit">

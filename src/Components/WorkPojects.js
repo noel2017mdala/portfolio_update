@@ -23,7 +23,7 @@ const WorkProjects = (props) => {
               title: "Whatsapp Web Clone",
               image: Simpo,
               description:
-                "I was inspired by the way WhatsApp web works so I created a clone of it. I enjoyed working on this application because it helped me understand more of the tools and technologies I used. This clone Application allows users to communicate privately and also create groups to have group communications. users can also update their Profiles as well as their about and they can also add contacts to their contact list. This application was developed using React, Redux, TailwindCSS for the frontEnd and also Node.js, Express.js, Mongoose, MongoDB, and also AWS for the Back-End.",
+                "Simple is an accounting SAAS Application that helps SME's easily manage their finances and all monetory activities involved. This application is connected to most of the financial institutions here in Malawi that helps in our clients easily make and receive payments",
               tools: ["HTML", "PHP", "BootStrap", "CSS", "Javascript", "Mysql"],
 
               buttons: [
@@ -67,7 +67,7 @@ const WorkProjects = (props) => {
               title: "Smart Schools",
               image: SmartSchools,
               description:
-                "I was inspired by the way WhatsApp web works so I created a clone of it. I enjoyed working on this application because it helped me understand more of the tools and technologies I used. This clone Application allows users to communicate privately and also create groups to have group communications. users can also update their Profiles as well as their about and they can also add contacts to their contact list. This application was developed using React, Redux, TailwindCSS for the frontEnd and also Node.js, Express.js, Mongoose, MongoDB, and also AWS for the Back-End.",
+                "SmartSchools is a Web and WhatsApp based school management platform that allows educational institutions to manage and track their day-to-day activities. The platform enables teachers to manage attendance, continuous assessments, examinations, and to also teach online. It helps administration to manage admission processes, generate school reports, manage fees payment and billing information, and also allows administration to send out text message communications to all stakeholders of the institution.",
               tools: ["HTML", "PHP", "BootStrap", "CSS", "Javascript", "Mysql"],
 
               buttons: [
@@ -106,10 +106,10 @@ const WorkProjects = (props) => {
 
             SetModalData({
               ...modalData,
-              title: "Smart Schools",
+              title: "MULANJE MISSION COLLEGE OF NURSING & MIDWIFERY",
               image: MMCN,
               description:
-                "I was inspired by the way WhatsApp web works so I created a clone of it. I enjoyed working on this application because it helped me understand more of the tools and technologies I used. This clone Application allows users to communicate privately and also create groups to have group communications. users can also update their Profiles as well as their about and they can also add contacts to their contact list. This application was developed using React, Redux, TailwindCSS for the frontEnd and also Node.js, Express.js, Mongoose, MongoDB, and also AWS for the Back-End.",
+                "MULANJE MISSION COLLEGE OF NURSING & MIDWIFERY is a Nursing and Midwifery College and i was tasked to develop a website that they can easily manage and configure without the need of a developer, So i developed this site using Wordpress with the Astra Theme and Elementor Page Builder.",
               tools: [
                 "HTML",
                 "PHP",
