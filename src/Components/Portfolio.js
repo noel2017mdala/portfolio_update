@@ -107,7 +107,7 @@ const Portfolio = (props) => {
               Components and i incorporated The Unsplash API which provides
               dozens of images that are displayed on this website and you can
               see different images from different users. I developed the project
-              from the Ground App except the API.
+              from the Ground App except the API that is provided buy Unsplash.
             </p>
 
             <div className="flex  flex-row flex-wrap mt-2 w-fit">
