@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Nav = (props) => {
   const clickHandler = (e) => {
@@ -12,6 +12,8 @@ const Nav = (props) => {
       top: location - 56,
     });
   };
+
+  const [navBarState, ChangeNavBarState] = useState(false);
 
   return (
     <>
@@ -105,7 +107,24 @@ const Nav = (props) => {
         {/* Navigation  w-3/5*/}
       </nav>
 
-      <div className="mobileNav w-full h-16  fixed z-20 sm:block md:hidden lg:hidden ">
+      <div
+        className="mobileNav w-full h-16  fixed z-20 sm:block md:hidden lg:hidden "
+        onClick={() => {
+          ChangeNavBarState(!navBarState);
+        }}
+      >
+        <div className=" w-fit inline-block ml-8 mt-6">
+          <li className="text-white text-xl">
+            <a
+              className="mr-3 text-2xl cursor-pointer"
+              href="#Home"
+              onClick={clickHandler}
+            >
+              Abel M'dala
+            </a>
+          </li>
+        </div>
+
         <div className="">
           <div
             className="cursor-pointer  fixed top-4 right-4"
@@ -120,6 +139,80 @@ const Nav = (props) => {
           </div>
         </div>
       </div>
+
+      {navBarState ? (
+        <div className="demo top-20  w-3/4 bg-primary2 shadow-lg md:hidden lg:hidden z-20 rounded-lg mx-auto">
+          <ul className="mt-6">
+            <li
+              className={`mr-2 text-xl block text-white p-2 rounded  text-center `}
+              onClick={() => {
+                ChangeNavBarState(false);
+              }}
+            >
+              <a
+                className="mr-3 text-xl cursor-pointer"
+                href="#About"
+                onClick={() => {
+                  ChangeNavBarState(false);
+                }}
+              >
+                About
+              </a>
+            </li>
+            <li
+              className={`mr-2 text-xl block text-white p-2 rounded  text-center `}
+              onClick={() => {
+                ChangeNavBarState(false);
+              }}
+            >
+              <a
+                className="mr-3 text-xl cursor-pointer"
+                href="#Portfolio"
+                onClick={() => {
+                  ChangeNavBarState(false);
+                }}
+              >
+                Portfolio
+              </a>
+            </li>
+
+            <li
+              className={`mr-2 text-xl block text-white p-2 rounded  text-center `}
+              onClick={() => {
+                ChangeNavBarState(false);
+              }}
+            >
+              <a
+                className="mr-3 text-xl cursor-pointer text-center"
+                href="#Skills"
+                onClick={() => {
+                  ChangeNavBarState(false);
+                }}
+              >
+                Skills
+              </a>
+            </li>
+            <li
+              className={`mr-2 text-xl block text-white p-2 rounded  text-center `}
+              onClick={() => {
+                ChangeNavBarState(false);
+              }}
+            >
+              <a
+                className="mr-3 text-xl cursor-pointer"
+                href="#Contact"
+                onClick={() => {
+                  ChangeNavBarState(false);
+                }}
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      ) : (
+        ""
+      )}
     </>
   );
 };

@@ -171,3 +171,10 @@ html {
 .mobileNav {
   background: rgba(44, 44, 44, 0.5607843137254902);
 }
+
+.demo {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 40%;
+}
