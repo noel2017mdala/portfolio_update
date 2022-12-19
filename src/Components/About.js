@@ -41,19 +41,19 @@ const About = (props) => {
               </h3>
 
               <p className="mt-4 text-lg text-white" ref={ref}>
-                I Graduated from St John Paul College with an Advanced Diploma
-                in Network Engineering, and I then later fell in love with
-                programming and started Learning it. I have experience
-                developing websites and web-based applications using plain HTML,
-                CSS, and JavaScript but also using advanced frameworks and
-                technologies such as React, Node.js, TailwindCss, and MongoDB
-                and I am currently working as a Full-Stack software developer at
-                M-technologies Limited.
+                I am a full-stack software developer with 3 years of experience
+                building and maintaining web applications. I have a strong
+                foundation in computer science concepts and I also have
+                experience working with front-end technologies such as HTML,
+                CSS, and React, as well as back-end technologies such as
+                Node.js, Express, SQL and Nosql databases such and MongoDB.
               </p>
 
               <p className="mt-4 text-lg text-white">
-                I am passionate about learning new technologies and how i can
-                integrate them into my daily work.
+                I am comfortable working independently or as part of a team and
+                have excellent communication skills. I am always looking for
+                opportunities to learn and grow as a developer, and I am excited
+                to apply my skills and experience to new challenges.
               </p>
 
               <a

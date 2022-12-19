@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import whatsappImage from "../Images/Projects/webWhastapp_clone.jpg";
-import photo_gallery from "../Images/Projects/photo_gallery.png";
+import fileVert from "../Images/Projects/filevert.png";
+import photo_gallery from "../Images/Projects/imageGenerator.png";
 import { Link } from "react-router-dom";
 const Portfolio = (props) => {
   const { ref, inView, entry } = useInView();
@@ -33,33 +34,25 @@ const Portfolio = (props) => {
           </div>
         </div>
 
-        <div className="grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-12 lg:gap-8 py-14 md:px-8">
           <div className="shadow-xl  cursor-pointer  relative rounded">
-            <img src={whatsappImage} className="block w-full" />
+            <img src={fileVert} className="block w-full" />
           </div>
 
           <div>
-            <h1 className="text-secondary font-bold text-2xl">
-              Whatsapp web clone
-            </h1>
+            <h1 className="text-secondary font-bold text-2xl">File-vert</h1>
             <p className="text-white mt-4">
-              I was inspired by the way WhatsApp web works so I created a clone
-              of it. I enjoyed working on this application because it helped me
-              understand more of the tools and technologies I used. This clone
-              Application allows users to communicate privately and also create
-              groups to have group communications. users can also update their
-              Profiles as well as their about and they can also add contacts to
-              their contact list. This application was developed using React,
-              Redux, TailwindCSS for the frontEnd and also Node.js, Express.js,
-              Mongoose, MongoDB, and also AWS for the Back-End.
+              File-vert is a subscription based web based application that
+              allows users to convert different files to different formats based
+              on their subscription type.
             </p>
 
-            <div className="flex  flex-row flex-wrap mt-2 w-fit">
+            <div className="flex items-center justify-start space-x-4 mt-4 space-y-0">
               <span className="px-3 mx-2 bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
                 React
               </span>
               <span className=" px-3 mx-2 bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
-                Redux
+                Graphql
               </span>
 
               <span className=" px-3 mx-2 bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
@@ -71,24 +64,24 @@ const Portfolio = (props) => {
               </span>
 
               <span className=" px-3 mx-2 bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
-                MongoDb
+                MongoDB
               </span>
-              <span className=" px-3 mx-2  bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
+              {/* <span className=" px-3 mx-2  bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
                 AWS
-              </span>
+              </span> */}
             </div>
 
             <div className="mt-4 mx-auto flex flex-row">
               <a
                 className="text-center border my-4  py-2 rounded-sm text-white border-secondary2 hover:bg-secondary2 hover:text-white  md:block w-3/12 mx-2"
-                href="https://github.com/noel2017mdala/whatsapp_clone"
+                href="https://github.com/noel2017mdala/file-vert"
                 target="_blank"
               >
                 GitHub
               </a>
               <a
                 className="text-center border my-4  py-2 rounded-sm text-secondary border-secondary hover:bg-secondary hover:text-primary  md:block w-3/12 mx-2"
-                href="http://whatsapp-webb-clone.netlify.app/"
+                href="https://filevert.netlify.app/"
                 target="_blank"
               >
                 Live Demo
@@ -101,42 +94,42 @@ const Portfolio = (props) => {
           </div>
 
           <div className="mt-6">
-            <h1 className="text-secondary font-bold text-2xl">Photo Gallery</h1>
+            <h1 className="text-secondary font-bold text-2xl">
+              Image generator
+            </h1>
             <p className="text-white mt-4">
-              This Project was developed using React,Redux and ReactStyled
-              Components and i incorporated The Unsplash API which provides
-              dozens of images that are displayed on this website and you can
-              see different images from different users. I developed the project
-              from the Ground App except the API that is provided buy Unsplash.
+              OpenAi Image generator is a web-based application that utilizes
+              the openAi image generator API to generate images of different
+              sizes based on your image description.
             </p>
 
-            <div className="flex  flex-row flex-wrap mt-2 w-fit">
+            <div className="flex items-center justify-start space-x-4 mt-4 space-y-0">
               <span className="px-3 mx-2 bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
-                React
+                Node.js
               </span>
               <span className=" px-3 mx-2 bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
-                Redux
+                HTML
               </span>
               <span className=" px-3 mx-2 bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
-                Styled Components
+                CSS
               </span>
 
               <span className=" px-3 mx-2 bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
-                Unsplash API
+                OpenAi API
               </span>
             </div>
 
             <div className="mt-4 mx-auto flex flex-row">
               <a
                 className="border my-4  py-2 rounded-sm text-white border-secondary2 hover:bg-secondary2 hover:text-white  md:block w-3/12 mx-2 text-center"
-                href="https://github.com/noel2017mdala/photo_gallery"
+                href="https://github.com/noel2017mdala/openAi-imageGenerator"
                 target="_blank"
               >
                 GitHub
               </a>
               <a
                 className="text-center border my-4  py-2 rounded-sm text-secondary border-secondary hover:bg-secondary hover:text-primary  md:block w-3/12 mx-2"
-                href="https://heuristic-wright-38b95c.netlify.app/"
+                href="https://openai-imagegenerator-production.up.railway.app/"
                 target="_blank"
               >
                 Live Demo

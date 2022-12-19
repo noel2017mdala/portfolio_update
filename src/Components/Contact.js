@@ -114,8 +114,8 @@ const Contact = (props) => {
         body: true,
       });
     } else {
-      console.log(e.target.userName);
-      return;
+      // console.log(e.target.userName);
+      // return;
       emailjs
         .sendForm(
           REACT_APP_SERVICE_KEY,

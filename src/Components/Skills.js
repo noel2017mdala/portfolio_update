@@ -15,6 +15,8 @@ import TailwindCSS from "../Images/Skills/tailwind-css-1.svg";
 import Linux from "../Images/Skills/Linux.png";
 import StyledComponents from "../Images/Skills/logo.png";
 import logo from "../Images/Skills/react.e8433ebf.svg";
+import graphql from "../Images/Skills/graphql.png";
+import flutter from "../Images/Skills/1671303558003.png";
 
 const list = [
   {
@@ -64,6 +66,14 @@ const list = [
   {
     image: Mongoose,
     name: "Mongoose",
+  },
+  {
+    image: graphql,
+    name: "Graphql",
+  },
+  {
+    image: flutter,
+    name: "Flutter and Dart",
   },
 
   {
