@@ -47,7 +47,7 @@ const Portfolio = (props) => {
               on their subscription type.
             </p>
 
-            <div className="flex items-center justify-start space-x-4 mt-4 space-y-0">
+            <div className="mt-4 hidden md:flex items-start justify-start overflow-x-auto overflow-y-hidden whitespace-nowrap">
               <span className="px-3 mx-2 bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
                 React
               </span>
@@ -103,7 +103,7 @@ const Portfolio = (props) => {
               sizes based on your image description.
             </p>
 
-            <div className="flex items-center justify-start space-x-4 mt-4 space-y-0">
+            <div className="mt-4 hidden md:flex items-start justify-start overflow-x-auto overflow-y-hidden whitespace-nowrap">
               <span className="px-3 mx-2 bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
                 Node.js
               </span>
