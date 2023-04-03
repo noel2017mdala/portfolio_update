@@ -5,6 +5,7 @@ import fileVert from "../Images/Projects/filevert.png";
 import imageGen from "../Images/Projects/imageGenerator.png";
 import FMS from "../Images/Projects/fms.png";
 import NetflixClone from "../Images/Projects/netflixClone.png";
+import GymMembership from "../Images/Projects/gym-membership.png";
 import { Link } from "react-router-dom";
 
 const PersonalProjects = (props) => {
@@ -61,6 +62,48 @@ const PersonalProjects = (props) => {
             </Link> */}
           </div>
         </div>
+
+        <div
+          className="shadow-2xl  cursor-pointer transform transition duration-500 hover:scale-95 relative rounded"
+          onClick={() => {
+            SetModalState({
+              ...modalState,
+              modalState: !modalState,
+            });
+
+            SetModalData({
+              ...modalData,
+              title: "EvoGym",
+              image: GymMembership,
+              description: `EvoGym is  gym membership web app that was developer with React and Typescript`,
+              tools: ["React", " Typescript", "Tailwind CSS"],
+
+              buttons: [
+                {
+                  demoActive: true,
+                  gitActive: true,
+                  gitLink: "https://github.com/noel2017mdala/gym-membership",
+                  demoLink: "https://evo-gym.netlify.app/",
+                  name: "EvoGym",
+                  link: "",
+                },
+              ],
+            });
+          }}
+        >
+          <img src={GymMembership} className="block w-full" />
+          <div className="absolute top-0 left-0 w-full h-full bg-black flex flex-col items-center justify-center opacity-0 transition-opacity  hover:opacity-70">
+            <h3 className="text-white text-2xl font-bold">EvoGym</h3>
+
+            {/* <Link
+              className="bg-primary p-4 mt-4 rounded text-white  transform transition duration-500 hover:scale-110"
+              to="/Portfolio"
+            >
+              Learn More
+            </Link> */}
+          </div>
+        </div>
+
         <div
           className="shadow-2xl  cursor-pointer transform transition duration-500 hover:scale-95 relative rounded"
           onClick={() => {
