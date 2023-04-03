@@ -17,6 +17,10 @@ import StyledComponents from "../Images/Skills/logo.png";
 import logo from "../Images/Skills/react.e8433ebf.svg";
 import graphql from "../Images/Skills/graphql.png";
 import flutter from "../Images/Skills/1671303558003.png";
+import typeScript from "../Images/Skills/typesript.png";
+import vite from "../Images/Skills/Vitejs-logo.svg";
+import postGres from "../Images/Skills/PostgreSQL_logo.3colors.svg";
+import nextJs from "../Images/Skills/next-js-logo-7929BCD36F-seeklogo.com.png";
 
 const list = [
   {
@@ -37,8 +41,17 @@ const list = [
     name: "Styled Components",
   },
   {
+    image: vite,
+    name: "Vite",
+  },
+  {
     image: JavaScript,
     name: "Javascript",
+  },
+
+  {
+    image: typeScript,
+    name: "Typescript",
   },
   {
     image: logo,
@@ -47,6 +60,11 @@ const list = [
   {
     image: NodeJS,
     name: "Node.js",
+  },
+
+  {
+    image: nextJs,
+    name: "Next.js",
   },
 
   {
@@ -66,6 +84,11 @@ const list = [
   {
     image: Mongoose,
     name: "Mongoose",
+  },
+
+  {
+    image: postGres,
+    name: "postgresql",
   },
   {
     image: graphql,

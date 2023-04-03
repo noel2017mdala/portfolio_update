@@ -3,6 +3,7 @@ import { useInView } from "react-intersection-observer";
 import whatsappImage from "../Images/Projects/webWhastapp_clone.jpg";
 import fileVert from "../Images/Projects/filevert.png";
 import photo_gallery from "../Images/Projects/imageGenerator.png";
+import netFlixClone from "../Images/Projects/netflixClone.png";
 import { Link } from "react-router-dom";
 const Portfolio = (props) => {
   const { ref, inView, entry } = useInView();
@@ -90,46 +91,47 @@ const Portfolio = (props) => {
           </div>
 
           <div className="shadow-xl  cursor-pointer relative rounded mt-6">
-            <img src={photo_gallery} className="block w-full" />
+            <img src={netFlixClone} className="block w-full" />
           </div>
 
           <div className="mt-6">
-            <h1 className="text-secondary font-bold text-2xl">
-              Image generator
-            </h1>
+            <h1 className="text-secondary font-bold text-2xl">Netflix Clone</h1>
             <p className="text-white mt-4">
-              OpenAi Image generator is a web-based application that utilizes
-              the openAi image generator API to generate images of different
-              sizes based on your image description.
+              A Netflix clone with Sign up and sign in capabilities that is
+              integrated with IMDB API to fetch Movies
             </p>
 
             <div className="mt-4 hidden md:flex items-start justify-start overflow-x-auto overflow-y-hidden whitespace-nowrap">
               <span className="px-3 mx-2 bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
-                Node.js
+                Next.js
               </span>
               <span className=" px-3 mx-2 bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
-                HTML
+                Typescript
               </span>
               <span className=" px-3 mx-2 bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
-                CSS
+                Tailwind CSS
               </span>
 
               <span className=" px-3 mx-2 bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
-                OpenAi API
+                IMDB API
+              </span>
+
+              <span className=" px-3 mx-2 bg-secondary rounded text-primary sm:mt-4 smd:mt-0 w-fit">
+                vercel
               </span>
             </div>
 
             <div className="mt-4 mx-auto flex flex-row">
               <a
                 className="border my-4  py-2 rounded-sm text-white border-secondary2 hover:bg-secondary2 hover:text-white  md:block w-3/12 mx-2 text-center"
-                href="https://github.com/noel2017mdala/openAi-imageGenerator"
+                href="https://github.com/noel2017mdala/netflix-clone.git"
                 target="_blank"
               >
                 GitHub
               </a>
               <a
                 className="text-center border my-4  py-2 rounded-sm text-secondary border-secondary hover:bg-secondary hover:text-primary  md:block w-3/12 mx-2"
-                href="https://openai-imagegenerator-production.up.railway.app/"
+                href="https://movie-app-mw.vercel.app/"
                 target="_blank"
               >
                 Live Demo

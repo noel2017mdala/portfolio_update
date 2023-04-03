@@ -41,19 +41,19 @@ const About = (props) => {
               </h3>
 
               <p className="mt-4 text-lg text-white" ref={ref}>
-                I am a full-stack software developer with 3 years of experience
-                building and maintaining web applications. I have a strong
-                foundation in computer science concepts and I also have
-                experience working with front-end technologies such as HTML,
-                CSS, and React, as well as back-end technologies such as
-                Node.js, Express, SQL and Nosql databases such and MongoDB.
+                I am a skilled software developer with over 4 years of
+                experience in developing web applications and mobile
+                applications using a variety of cutting-edge technologies and
+                programming languages.
               </p>
 
               <p className="mt-4 text-lg text-white">
-                I am comfortable working independently or as part of a team and
-                have excellent communication skills. I am always looking for
-                opportunities to learn and grow as a developer, and I am excited
-                to apply my skills and experience to new challenges.
+                My expertise lies in building responsive and user-friendly
+                interfaces using technologies like JavaScript, React, Flutter,
+                and Next.js. I have also worked extensively with Node.js,
+                MongoDB, and PostgreSQL, leveraging these tools to build robust
+                back-end systems that can handle complex data processing tasks
+                and provide seamless integration with front-end interfaces.
               </p>
 
               <a
